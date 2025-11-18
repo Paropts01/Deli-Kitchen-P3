@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Applying page that lets the user apply and summerise the application details.">
+    <title>Apply Deli Kitchen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+     <link rel="stylesheet" href="../css/style.CSS">
+    <style>
+     
+     
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+     <nav class="navbar">    
+        <div class="navbar-content">
+            <div class="logo">
+                <img src="../Assets/logo.png" alt="logo">
+            </div>
+
+            <!-- Search Bar in the middle -->
+            <div class="search-container">
+                <input type="text" class="search-input" placeholder="Search...">
+                <button class="search-button">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+                <div class="search-results" id="searchResults"></div>
+            </div>
+
+            <!-- Hamburger (mobile) -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+
+            <ul id="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Programs ▾</a>
+                    <div class="dropdown-content">
+                        <a href="./culinary.html">Culinary Arts</a>
+                        <a href="./baking.html">Professional Baking & Pastry</a>
+                        <a href="./food_manegement.html">Culinary Management</a>
+                        <a href="./cuisine.html">International Cuisine</a>
+                        <a href="./Nutrition & Wellness.html">Nutrition & Wellness</a>
+                    </div>
+                </li>
+                <li><a href="./students.html">Student Life</a></li>
+                <li><a href="./apply.html">Apply</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Header -->
+    <header class="hero">
+        <div class="container">
+            <h1>Apply to Deli Kitchen</h1>
+            <p>Begin your culinary journey with our world-class programs taught by industry experts</p>
+        </div>
+    </header>
+
+   <!-- Application Form -->
+    <div class="application-container">
+        <form id="applicationForm" class="application-form">
+            <h2 style="color: #f3c68f; margin-bottom: 10px;">Culinary Program Application</h2>
+            <p style="margin-bottom: 25px;">Please complete all required fields marked with an asterisk (*)</p>
+            
+            <!-- Personal Information Section -->
+            <div class="form-section">
+                <h3><i class="fas fa-user"></i> Personal Information</h3>
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="firstName" class="required">First Name</label>
+                            <input type="text" id="firstName" class="form-control" required>
+                            <div class="error-message" id="firstNameError">Please enter your first name</div>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="lastName" class="required">Last Name</label>
+                            <input type="text" id="lastName" class="form-control" required>
+                            <div class="error-message" id="lastNameError">Please enter your last name</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="email" class="required">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                            <div class="error-message" id="emailError">Please enter a valid email address</div>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="phone" class="required">Phone Number</label>
+                            <input type="tel" id="phone" class="form-control" pattern="[0-9]*" inputmode="numeric" required>
+                            <div class="error-message" id="phoneError">Please enter a valid phone number (numbers only)</div>
+                            <div class="validation-status" id="phoneValidation"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="dob" class="required">Date of Birth</label>
+                            <input type="date" id="dob" class="form-control" required>
+                            <div class="error-message" id="dobError">Please enter your date of birth</div>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="nationality" class="required">Nationality</label>
+                            <input type="text" id="nationality" class="form-control" required>
+                            <div class="error-message" id="nationalityError">Please enter your nationality</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="address" class="required">Address</label>
+                    <textarea id="address" class="form-control" rows="3" required></textarea>
+                    <div class="error-message" id="addressError">Please enter your address</div>
+                </div>
+            </div>
+            
+            <!-- Emergency Contact Section -->
+            <div class="form-section">
+                <h3><i class="fas fa-first-aid"></i> Emergency Contact Information</h3>
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="emergencyName" class="required">Emergency Contact Name</label>
+                            <input type="text" id="emergencyName" class="form-control" required>
+                            <div class="error-message" id="emergencyNameError">Please enter emergency contact name</div>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="emergencyRelationship" class="required">Relationship</label>
+                            <input type="text" id="emergencyRelationship" class="form-control" required placeholder="e.g., Parent, Spouse">
+                            <div class="error-message" id="emergencyRelationshipError">Please specify relationship</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="emergencyPhone" class="required">Emergency Contact Phone</label>
+                            <input type="tel" id="emergencyPhone" class="form-control" pattern="[0-9]*" inputmode="numeric" required>
+                            <div class="error-message" id="emergencyPhoneError">Please enter emergency contact phone (numbers only)</div>
+                            <div class="validation-status" id="emergencyPhoneValidation"></div>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="emergencyEmail">Emergency Contact Email</label>
+                            <input type="email" id="emergencyEmail" class="form-control">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Payer's Details Section -->
+            <div class="form-section">
+                <h3><i class="fas fa-credit-card"></i> Payer's Details</h3>
+                <div class="form-note">If someone else will be paying for your tuition, please provide their details below. Otherwise, leave blank.</div>
+                
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="payerName">Payer's Full Name</label>
+                            <input type="text" id="payerName" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="payerRelationship">Relationship to Applicant</label>
+                            <input type="text" id="payerRelationship" class="form-control" placeholder="e.g., Parent, Guardian">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="payerEmail">Payer's Email</label>
+                            <input type="email" id="payerEmail" class="form-control">
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="payerPhone">Payer's Phone</label>
+                            <input type="tel" id="payerPhone" class="form-control" pattern="[0-9]*" inputmode="numeric">
+                            <div class="error-message" id="payerPhoneError">Please enter a valid phone number (numbers only)</div>
+                            <div class="validation-status" id="payerPhoneValidation"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="payerAddress">Payer's Address</label>
+                    <textarea id="payerAddress" class="form-control" rows="2"></textarea>
+                </div>
+            </div>
+            
+            <!-- Program Selection Section -->
+            <div class="form-section">
+                <h3><i class="fas fa-book-open"></i> Program Selection</h3>
+                <div class="form-group">
+                    <label for="program" class="required">Program of Interest</label>
+                    <select id="program" class="form-control" required>
+                        <option value="">Select a program</option>
+                        <option value="culinary_arts">Culinary Arts</option>
+                        <option value="baking_pastry">Professional Baking & Pastry</option>
+                        <option value="culinary_management">Culinary Management</option>
+                        <option value="international_cuisine">International Cuisine</option>
+                        <option value="nutrition_wellness">Nutrition & Wellness</option>
+                    </select>
+                    <div class="error-message" id="programError">Please select a program</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="startDate" class="required">Preferred Start Date</label>
+                    <select id="startDate" class="form-control" required>
+                        <option value="">Select a start date</option>
+                        <option value="2026-02">February 2026</option>
+                        <option value="2026-06">June 2026</option>
+                    </select>
+                    <div class="error-message" id="startDateError">Please select a start date</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="studyMode">Study Mode</label>
+                    <select id="studyMode" class="form-control">
+                        <option value="">Select study mode</option>
+                        <option value="full_time">Full Time</option>
+                        <option value="part_time">Part Time</option>
+                        <option value="weekend">Weekend Program</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Educational Background Section -->
+            <div class="form-section">
+                <h3><i class="fas fa-graduation-cap"></i> Educational Background</h3>
+                <div class="form-group">
+                    <label for="highestEducation" class="required">Highest Level of Education</label>
+                    <select id="highestEducation" class="form-control" required>
+                        <option value="">Select education level</option>
+                        <option value="high_school">High School Diploma</option>
+                        <option value="associate">Associate Degree</option>
+                        <option value="bachelor">Bachelor's Degree</option>
+                        <option value="master">Master's Degree</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div class="error-message" id="educationError">Please select your education level</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="institution">Institution Name</label>
+                    <input type="text" id="institution" class="form-control">
+                </div>
+                
+                <div class="form-group">
+                    <label for="graduationYear">Year of Graduation</label>
+                    <input type="number" id="graduationYear" class="form-control" min="1950" max="2030">
+                </div>
+            </div>
+            
+            <!-- Culinary Experience Section -->
+            <div class="form-section">
+                <h3><i class="fas fa-utensils"></i> Culinary Experience</h3>
+                <div class="form-group">
+                    <label for="experience">Previous Culinary Experience (if any)</label>
+                    <textarea id="experience" class="form-control" rows="4" placeholder="Describe any previous culinary experience, including work in restaurants, catering, or personal cooking experience"></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="specialization">Area of Specialization Interest</label>
+                    <input type="text" id="specialization" class="form-control" placeholder="e.g., Pastry, Italian cuisine, Vegan cooking">
+                </div>
+            </div>
+            
+            <!-- Additional Information Section -->
+            <div class="form-section">
+                <h3><i class="fas fa-info-circle"></i> Additional Information</h3>
+                <div class="form-group">
+                    <label for="motivation" class="required">Motivation Statement</label>
+                    <textarea id="motivation" class="form-control" rows="5" required placeholder="Please explain why you want to study at Deli Kitchen and your career goals"></textarea>
+                    <div class="error-message" id="motivationError">Please provide your motivation statement</div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="howHeard">How did you hear about us?</label>
+                    <select id="howHeard" class="form-control">
+                        <option value="">Select an option</option>
+                        <option value="website">Website</option>
+                        <option value="social_media">Social Media</option>
+                        <option value="friend">Friend/Relative</option>
+                        <option value="event">Culinary Event</option>
+                        <option value="advertisement">Advertisement</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Form Actions -->
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary" id="resetBtn">Reset Form</button>
+                <button type="submit" class="btn" id="submitBtn">Submit Application</button>
+            </div>
+        </form>
+        
+        <!-- Application Summary -->
+        <div id="applicationSummary" class="application-summary">
+            <h2 style="color: #f3c68f; margin-bottom: 20px;">Application Summary</h2>
+            <div class="summary-section">
+                <h4>Personal Information</h4>
+                <div class="summary-item"><strong>Full Name:</strong> <span id="summaryName"></span></div>
+                <div class="summary-item"><strong>Email:</strong> <span id="summaryEmail"></span></div>
+                <div class="summary-item"><strong>Phone:</strong> <span id="summaryPhone"></span></div>
+                <div class="summary-item"><strong>Date of Birth:</strong> <span id="summaryDob"></span></div>
+                <div class="summary-item"><strong>Nationality:</strong> <span id="summaryNationality"></span></div>
+                <div class="summary-item"><strong>Address:</strong> <span id="summaryAddress"></span></div>
+            </div>
+            
+            <div class="summary-section">
+                <h4>Emergency Contact</h4>
+                <div class="summary-item"><strong>Contact Name:</strong> <span id="summaryEmergencyName"></span></div>
+                <div class="summary-item"><strong>Relationship:</strong> <span id="summaryEmergencyRelationship"></span></div>
+                <div class="summary-item"><strong>Contact Phone:</strong> <span id="summaryEmergencyPhone"></span></div>
+                <div class="summary-item"><strong>Contact Email:</strong> <span id="summaryEmergencyEmail"></span></div>
+            </div>
+            
+            <div class="summary-section">
+                <h4>Payer's Details</h4>
+                <div class="summary-item"><strong>Payer Name:</strong> <span id="summaryPayerName"></span></div>
+                <div class="summary-item"><strong>Relationship:</strong> <span id="summaryPayerRelationship"></span></div>
+                <div class="summary-item"><strong>Payer Email:</strong> <span id="summaryPayerEmail"></span></div>
+                <div class="summary-item"><strong>Payer Phone:</strong> <span id="summaryPayerPhone"></span></div>
+                <div class="summary-item"><strong>Payer Address:</strong> <span id="summaryPayerAddress"></span></div>
+            </div>
+            
+            <div class="summary-section">
+                <h4>Program Details</h4>
+                <div class="summary-item"><strong>Program:</strong> <span id="summaryProgram"></span></div>
+                <div class="summary-item"><strong>Start Date:</strong> <span id="summaryStartDate"></span></div>
+                <div class="summary-item"><strong>Study Mode:</strong> <span id="summaryStudyMode"></span></div>
+            </div>
+            
+            <div class="summary-section">
+                <h4>Educational Background</h4>
+                <div class="summary-item"><strong>Education Level:</strong> <span id="summaryEducation"></span></div>
+                <div class="summary-item"><strong>Institution:</strong> <span id="summaryInstitution"></span></div>
+                <div class="summary-item"><strong>Graduation Year:</strong> <span id="summaryGraduation"></span></div>
+            </div>
+            
+            <div class="summary-section">
+                <h4>Culinary Experience</h4>
+                <div class="summary-item"><strong>Experience:</strong> <span id="summaryExperience"></span></div>
+                <div class="summary-item"><strong>Specialization Interest:</strong> <span id="summarySpecialization"></span></div>
+            </div>
+            
+            <div class="summary-section">
+                <h4>Additional Information</h4>
+                <div class="summary-item"><strong>Motivation:</strong> <span id="summaryMotivation"></span></div>
+                <div class="summary-item"><strong>How You Heard:</strong> <span id="summaryHowHeard"></span></div>
+            </div>
+            
+            <div class="form-actions">
+                <button type="button" class="btn btn-secondary" id="editBtn">Edit Application</button>
+                <button type="button" class="btn" id="confirmBtn">Confirm & Submit</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section about">
+                <h3>About Our School</h3>
+                <p>We are a premier Culinary Arts School dedicated to shaping the next generation of chefs and hospitality leaders. Our programs blend creativity, technique, and real-world experience.</p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li><a href="./student_life.html">Student Life</a></li>
+                    <li><a href="./apply.html">Apply</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:cook@deli.co.za">cook@deli.co.za</a></p>
+                <p>Phone: (021)-555-7890</p>
+                <p>54 Church(kerk) Street,<br>
+                    Polokwane,<br>
+                    0700</p>
+            </div>
+
+            <!-- Social Media -->
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://x.com/" target="_blank"><i class="fab fa-x"></i></a>
+                    <a href="https://www.youtube.com//" target="_blank"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="footer-bottom">
+            <p>© 2025 @deli_kitchen. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+     <script>
+        // ---------------- SEARCH FUNCTIONALITY ----------------
+const searchData = [
+    { title: "Home", url: "./index.html" },
+    { title: "About Us", url: "./pages/about.html" },
+    { title: "Contact", url: "./pages/contact.html" },
+    { title: "Culinary Arts Program", url: "./pages/culinary.html" },
+    { title: "Professional Baking & Pastry", url: "./pages/baking.html" },
+    { title: "Culinary Management", url: "./pages/food_manegement.html" },
+    { title: "International Cuisine", url: "./pages/cuisine.html" },
+    { title: "Nutrition & Wellness", url: "./pages/Nutrition & Wellness.html" },
+    { title: "Student Life", url: "./pages/students.html" },
+    { title: "Apply Now", url: "./pages/apply.html" }
+];
+
+// Initialize search functionality when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    const searchInput = document.querySelector('.search-input');
+    const searchButton = document.querySelector('.search-button');
+    const searchResults = document.getElementById('searchResults');
+    
+    if (searchInput && searchButton && searchResults) {
+        searchInput.addEventListener('input', function() {
+            const query = this.value.toLowerCase().trim();
+            
+            if (query.length === 0) {
+                searchResults.classList.remove('show');
+                return;
+            }
+            
+            const filteredResults = searchData.filter(item => 
+                item.title.toLowerCase().includes(query)
+            );
+            
+            displaySearchResults(filteredResults, searchResults);
+        });
+
+        searchButton.addEventListener('click', function() {
+            const query = searchInput.value.toLowerCase().trim();
+            
+            if (query.length === 0) {
+                searchResults.classList.remove('show');
+                return;
+            }
+            
+            const filteredResults = searchData.filter(item => 
+                item.title.toLowerCase().includes(query)
+            );
+            
+            displaySearchResults(filteredResults, searchResults);
+        });
+
+        // Close search results when clicking outside
+        document.addEventListener('click', function(event) {
+            if (!event.target.closest('.search-container')) {
+                searchResults.classList.remove('show');
+            }
+        });
+    }
+});
+
+// ---------------- HAMBURGER + DROPDOWNS ----------------
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
+const dropdowns = document.querySelectorAll('.dropdown');
+
+if (hamburger && navLinks) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    navLinks.classList.toggle('show');
+  });
+}
+
+
+// Desktop dropdown click
+const dropBtn = document.querySelector('.dropbtn');
+const dropdown = document.querySelector('.dropdown');
+
+if (dropBtn && dropdown) {
+  dropBtn.addEventListener('click', function (e) {
+    if (window.innerWidth > 768) {
+      e.preventDefault();
+      dropdown.classList.toggle('active');
+    }
+  });
+}
+
+// Mobile dropdown click
+dropdowns.forEach(drop => {
+  const dropBtn = drop.querySelector('.dropbtn');
+
+  if (dropBtn) {
+    dropBtn.addEventListener('click', (e) => {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        drop.classList.toggle('open');
+      }
+    });
+
+    const dropdownLinks = drop.querySelectorAll('.dropdown-content a');
+    dropdownLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        if (window.innerWidth <= 768 && navLinks && hamburger) {
+          navLinks.classList.remove('show');
+          hamburger.classList.remove('active');
+        }
+      });
+    });
+  }
+});
+
+// Close dropdown on desktop outside click
+document.addEventListener('click', function (e) {
+  if (window.innerWidth > 768 && dropdown && !dropdown.contains(e.target)) {
+    dropdown.classList.remove('active');
+  }
+});
+
+//------------------------apply form validation java------------------------------------------
+
+function displaySearchResults(results, searchResults) {
+    searchResults.innerHTML = '';
+    
+    if (results.length === 0) {
+        const noResult = document.createElement('div');
+        noResult.className = 'search-result-item';
+        noResult.textContent = 'No results found';
+        searchResults.appendChild(noResult);
+    } else {
+        results.forEach(result => {
+            const resultItem = document.createElement('a');
+            resultItem.className = 'search-result-item';
+            resultItem.href = result.url;
+            resultItem.textContent = result.title;
+            searchResults.appendChild(resultItem);
+        });
+    }
+    
+    searchResults.classList.add('show');
+}
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('applicationForm');
+            const summary = document.getElementById('applicationSummary');
+            const resetBtn = document.getElementById('resetBtn');
+            const editBtn = document.getElementById('editBtn');
+            const confirmBtn = document.getElementById('confirmBtn');
+            const submitBtn = document.getElementById('submitBtn');
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+            
+            // Phone number fields
+            const phoneFields = [
+                { id: 'phone', validationId: 'phoneValidation' },
+                { id: 'emergencyPhone', validationId: 'emergencyPhoneValidation' },
+                { id: 'payerPhone', validationId: 'payerPhoneValidation' }
+            ];
+            
+            // Create feedback popup
+            function createFeedbackPopup(startDate) {
+                const popup = document.createElement('div');
+                popup.className = 'feedback-popup';
+                popup.style.cssText = `
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background: rgba(0,0,0,0.7);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 10000;
+                `;
+                
+                const popupContent = document.createElement('div');
+                popupContent.style.cssText = `
+                    background: white;
+                    padding: 40px;
+                    border-radius: 10px;
+                    max-width: 500px;
+                    width: 90%;
+                    text-align: center;
+                    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+                `;
+                
+                // Calculate feedback timeline based on start date
+                const feedbackTimeline = calculateFeedbackTimeline(startDate);
+                
+                popupContent.innerHTML = `
+                    <div style="color: #f3c68f; font-size: 48px; margin-bottom: 20px;">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h2 style="color: #333; margin-bottom: 20px; font-size: 24px;">Application Submitted Successfully!</h2>
+                    <div style="background: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 25px; text-align: left;">
+                        <h3 style="color: #f3c68f; margin-bottom: 15px; font-size: 18px;">What Happens Next?</h3>
+                        <div style="display: flex; align-items: flex-start; margin-bottom: 12px;">
+                            <div style="background: #f3c68f; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; margin-right: 12px; flex-shrink: 0;">1</div>
+                            <div>
+                                <strong style="color: #333;">Application Review</strong>
+                                <p style="margin: 5px 0 0 0; color: #666; font-size: 14px;">Our admissions team will review your application within <strong>3-5 business days</strong></p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: flex-start; margin-bottom: 12px;">
+                            <div style="background: #f3c68f; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; margin-right: 12px; flex-shrink: 0;">2</div>
+                            <div>
+                                <strong style="color: #333;">Interview Scheduling</strong>
+                                <p style="margin: 5px 0 0 0; color: #666; font-size: 14px;">You'll receive an email to schedule an interview within <strong>${feedbackTimeline.interviewTimeline}</strong></p>
+                            </div>
+                        </div>
+                        <div style="display: flex; align-items: flex-start;">
+                            <div style="background: #f3c68f; color: white; border-radius: 50%; width: 24px; height: 24px; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: bold; margin-right: 12px; flex-shrink: 0;">3</div>
+                            <div>
+                                <strong style="color: #333;">Final Decision</strong>
+                                <p style="margin: 5px 0 0 0; color: #666; font-size: 14px;">Admission decision will be communicated within <strong>${feedbackTimeline.decisionTimeline}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background: #e8f5e8; padding: 15px; border-radius: 8px; margin-bottom: 25px; border-left: 4px solid #2ecc71;">
+                        <p style="margin: 0; color: #2d5016; font-size: 14px;">
+                            <strong>Program Start:</strong> ${feedbackTimeline.programStart}<br>
+                            <strong>Contact:</strong> If you have questions, email us at <a href="mailto:admissions@delikitchen.edu" style="color: #f3c68f;">admissions@delikitchen.edu</a>
+                        </p>
+                    </div>
+                    <button id="closePopup" style="background: #f3c68f; color: #333; border: none; padding: 12px 30px; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; transition: background 0.3s;">
+                        Got It!
+                    </button>
+                `;
+                
+                popup.appendChild(popupContent);
+                document.body.appendChild(popup);
+                
+                // Add close functionality
+                const closeBtn = document.getElementById('closePopup');
+                closeBtn.addEventListener('click', function() {
+                    document.body.removeChild(popup);
+                    // Reset form after closing popup
+                    form.reset();
+                    resetValidationStates();
+                });
+                
+                // Close popup when clicking outside
+                popup.addEventListener('click', function(e) {
+                    if (e.target === popup) {
+                        document.body.removeChild(popup);
+                        // Reset form after closing popup
+                        form.reset();
+                        resetValidationStates();
+                    }
+                });
+            }
+            
+            // Calculate feedback timeline based on start date
+            function calculateFeedbackTimeline(startDate) {
+                const now = new Date();
+                const selectedDate = new Date(startDate + '-01');
+                const monthsUntilStart = (selectedDate.getFullYear() - now.getFullYear()) * 12 + (selectedDate.getMonth() - now.getMonth());
+                
+                let interviewTimeline, decisionTimeline;
+                
+                if (monthsUntilStart <= 4) {
+                    // If starting soon, expedited process
+                    interviewTimeline = '5-7 business days';
+                    decisionTimeline = '2 weeks after interview';
+                } else {
+                    // Normal timeline for future starts
+                    interviewTimeline = '7-10 business days';
+                    decisionTimeline = '3-4 weeks after interview';
+                }
+                
+                // Format program start date
+                const programStart = formatStartDate(startDate);
+                
+                return {
+                    interviewTimeline,
+                    decisionTimeline,
+                    programStart
+                };
+            }
+            
+            // Toggle mobile navigation
+            hamburger.addEventListener('click', function() {
+                navLinks.classList.toggle('active');
+            });
+            
+            // Phone number validation
+            phoneFields.forEach(field => {
+                const input = document.getElementById(field.id);
+                const validation = document.getElementById(field.validationId);
+                
+                // Prevent non-numeric input
+                input.addEventListener('keydown', function(e) {
+                    // Allow: backspace, delete, tab, escape, enter
+                    if ([46, 8, 9, 27, 13].includes(e.keyCode) || 
+                        // Allow: Ctrl+A, Ctrl+C, Ctrl+V, Ctrl+X
+                        (e.keyCode === 65 && e.ctrlKey === true) || 
+                        (e.keyCode === 67 && e.ctrlKey === true) ||
+                        (e.keyCode === 86 && e.ctrlKey === true) ||
+                        (e.keyCode === 88 && e.ctrlKey === true) ||
+                        // Allow: home, end, left, right
+                        (e.keyCode >= 35 && e.keyCode <= 39)) {
+                        return;
+                    }
+                    
+                    // Ensure it's a number
+                    if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                        e.preventDefault();
+                    }
+                });
+                
+                input.addEventListener('input', function() {
+                    validatePhoneNumber(input, validation);
+                });
+                
+                input.addEventListener('blur', function() {
+                    validatePhoneNumber(input, validation);
+                });
+                
+                // Paste event to clean non-numeric characters
+                input.addEventListener('paste', function(e) {
+                    e.preventDefault();
+                    const pastedText = (e.clipboardData || window.clipboardData).getData('text');
+                    const numbersOnly = pastedText.replace(/\D/g, '');
+                    document.execCommand('insertText', false, numbersOnly);
+                    validatePhoneNumber(input, validation);
+                });
+            });
+            
+            // Real-time validation for required fields
+            const requiredFields = document.querySelectorAll('input[required], select[required], textarea[required]');
+            requiredFields.forEach(field => {
+                field.addEventListener('blur', function() {
+                    validateField(field);
+                });
+                
+                field.addEventListener('input', function() {
+                    // Clear error when user starts typing
+                    if (field.value.trim() !== '') {
+                        clearFieldError(field);
+                    }
+                });
+            });
+            
+            // Form validation and submission
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                if (validateForm()) {
+                    // Populate summary
+                    populateSummary();
+                    
+                    // Show summary and hide form
+                    form.style.display = 'none';
+                    summary.style.display = 'block';
+                    
+                    // Scroll to top of summary
+                    summary.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                } else {
+                    // Scroll to first error
+                    const firstError = document.querySelector('.form-control.error');
+                    if (firstError) {
+                        firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                        firstError.focus();
+                    }
+                }
+            });
+            
+            // Reset form
+            resetBtn.addEventListener('click', function() {
+                if (confirm('Are you sure you want to reset the form? All entered data will be lost.')) {
+                    form.reset();
+                    clearAllErrors();
+                    resetValidationStates();
+                }
+            });
+            
+            // Edit application
+            editBtn.addEventListener('click', function() {
+                summary.style.display = 'none';
+                form.style.display = 'block';
+                
+                // Scroll to top of form
+                form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+            
+            // Confirm and submit
+            confirmBtn.addEventListener('click', function() {
+                // Get the selected start date for the feedback popup
+                const selectedStartDate = document.getElementById('startDate').value;
+                
+                // In a real application, you would send the data to a server here
+                const formData = new FormData(form);
+                const applicationData = {};
+                
+                // Collect all form data
+                for (let [key, value] of formData.entries()) {
+                    applicationData[key] = value;
+                }
+                
+                // Add additional fields that might not be in formData
+                applicationData.emergencyName = document.getElementById('emergencyName').value;
+                applicationData.emergencyRelationship = document.getElementById('emergencyRelationship').value;
+                applicationData.emergencyPhone = document.getElementById('emergencyPhone').value;
+                applicationData.emergencyEmail = document.getElementById('emergencyEmail').value;
+                applicationData.payerName = document.getElementById('payerName').value;
+                applicationData.payerRelationship = document.getElementById('payerRelationship').value;
+                applicationData.payerEmail = document.getElementById('payerEmail').value;
+                applicationData.payerPhone = document.getElementById('payerPhone').value;
+                applicationData.payerAddress = document.getElementById('payerAddress').value;
+                
+                // Simulate form submission
+                console.log('Application Data:', applicationData);
+                
+                // Show feedback popup with timeline information
+                createFeedbackPopup(selectedStartDate);
+                
+                // Hide summary after submission
+                summary.style.display = 'none';
+                form.style.display = 'block';
+            });
+            
+            // Phone number validation function
+            function validatePhoneNumber(input, validationElement) {
+                const value = input.value.trim();
+                
+                // Skip validation if field is optional and empty
+                if (!input.hasAttribute('required') && value === '') {
+                    input.classList.remove('error', 'valid');
+                    validationElement.textContent = '';
+                    validationElement.className = 'validation-status';
+                    return true;
+                }
+                
+                // Check if value contains only numbers and has reasonable length
+                if (/^\d+$/.test(value) && value.length >= 7 && value.length <= 15) {
+                    input.classList.remove('error');
+                    input.classList.add('valid');
+                    validationElement.innerHTML = '<i class="fas fa-check validation-icon"></i> Valid phone number';
+                    validationElement.className = 'validation-status valid';
+                    return true;
+                } else if (value === '') {
+                    input.classList.remove('valid');
+                    input.classList.add('error');
+                    validationElement.innerHTML = '<i class="fas fa-times validation-icon"></i> Phone number is required';
+                    validationElement.className = 'validation-status error';
+                    return false;
+                } else {
+                    input.classList.remove('valid');
+                    input.classList.add('error');
+                    if (!/^\d+$/.test(value)) {
+                        validationElement.innerHTML = '<i class="fas fa-times validation-icon"></i> Please use numbers only';
+                    } else if (value.length < 7) {
+                        validationElement.innerHTML = '<i class="fas fa-times validation-icon"></i> Phone number is too short';
+                    } else {
+                        validationElement.innerHTML = '<i class="fas fa-times validation-icon"></i> Phone number is too long';
+                    }
+                    validationElement.className = 'validation-status error';
+                    return false;
+                }
+            }
+            
+            // Individual field validation
+            function validateField(field) {
+                const value = field.value.trim();
+                const fieldId = field.id;
+                const errorElement = document.getElementById(fieldId + 'Error');
+                
+                if (value === '') {
+                    field.classList.add('error');
+                    field.classList.remove('valid');
+                    if (errorElement) {
+                        errorElement.style.display = 'block';
+                    }
+                    return false;
+                } else {
+                    field.classList.remove('error');
+                    field.classList.add('valid');
+                    if (errorElement) {
+                        errorElement.style.display = 'none';
+                    }
+                    
+                    // Additional validation for specific fields
+                    if (field.type === 'email' && value !== '') {
+                        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                        if (!emailRegex.test(value)) {
+                            field.classList.add('error');
+                            field.classList.remove('valid');
+                            if (errorElement) {
+                                errorElement.textContent = 'Please enter a valid email address';
+                                errorElement.style.display = 'block';
+                            }
+                            return false;
+                        }
+                    }
+                    
+                    // Date validation (not in the future and reasonable age)
+                    if (field.type === 'date' && value !== '') {
+                        const inputDate = new Date(value);
+                        const today = new Date();
+                        const minAgeDate = new Date(today.getFullYear() - 16, today.getMonth(), today.getDate());
+                        const maxAgeDate = new Date(today.getFullYear() - 80, today.getMonth(), today.getDate());
+                        
+                        if (inputDate > minAgeDate) {
+                            field.classList.add('error');
+                            field.classList.remove('valid');
+                            if (errorElement) {
+                                errorElement.textContent = 'You must be at least 16 years old to apply';
+                                errorElement.style.display = 'block';
+                            }
+                            return false;
+                        } else if (inputDate < maxAgeDate) {
+                            field.classList.add('error');
+                            field.classList.remove('valid');
+                            if (errorElement) {
+                                errorElement.textContent = 'Please enter a valid date of birth';
+                                errorElement.style.display = 'block';
+                            }
+                            return false;
+                        }
+                    }
+                    
+                    return true;
+                }
+            }
+            
+            // Clear error for a specific field
+            function clearFieldError(field) {
+                const fieldId = field.id;
+                const errorElement = document.getElementById(fieldId + 'Error');
+                
+                if (errorElement) {
+                    errorElement.style.display = 'none';
+                }
+                field.classList.remove('error');
+            }
+            
+            // Form validation function
+            function validateForm() {
+                let isValid = true;
+                
+                // Validate all required fields
+                requiredFields.forEach(field => {
+                    if (!validateField(field)) {
+                        isValid = false;
+                    }
+                });
+                
+                // Validate phone numbers
+                phoneFields.forEach(field => {
+                    const input = document.getElementById(field.id);
+                    const validation = document.getElementById(field.validationId);
+                    
+                    // Only validate if field is required or has a value
+                    if (input.hasAttribute('required') || input.value.trim() !== '') {
+                        if (!validatePhoneNumber(input, validation)) {
+                            isValid = false;
+                        }
+                    }
+                });
+                
+                return isValid;
+            }
+            
+            // Clear all error messages
+            function clearAllErrors() {
+                const errorMessages = document.querySelectorAll('.error-message');
+                errorMessages.forEach(error => {
+                    error.style.display = 'none';
+                });
+                
+                const validationStatuses = document.querySelectorAll('.validation-status');
+                validationStatuses.forEach(status => {
+                    status.textContent = '';
+                    status.className = 'validation-status';
+                });
+            }
+            
+            // Reset validation states
+            function resetValidationStates() {
+                const formControls = document.querySelectorAll('.form-control');
+                formControls.forEach(control => {
+                    control.classList.remove('error', 'valid');
+                });
+            }
+            
+            // Populate summary with form data
+            function populateSummary() {
+                // Personal Information
+                document.getElementById('summaryName').textContent = 
+                    `${document.getElementById('firstName').value} ${document.getElementById('lastName').value}`;
+                document.getElementById('summaryEmail').textContent = document.getElementById('email').value;
+                document.getElementById('summaryPhone').textContent = document.getElementById('phone').value;
+                document.getElementById('summaryDob').textContent = formatDate(document.getElementById('dob').value);
+                document.getElementById('summaryNationality').textContent = document.getElementById('nationality').value;
+                document.getElementById('summaryAddress').textContent = document.getElementById('address').value;
+                
+                // Emergency Contact
+                document.getElementById('summaryEmergencyName').textContent = document.getElementById('emergencyName').value;
+                document.getElementById('summaryEmergencyRelationship').textContent = document.getElementById('emergencyRelationship').value;
+                document.getElementById('summaryEmergencyPhone').textContent = document.getElementById('emergencyPhone').value;
+                document.getElementById('summaryEmergencyEmail').textContent = document.getElementById('emergencyEmail').value || 'Not provided';
+                
+                // Payer's Details
+                document.getElementById('summaryPayerName').textContent = document.getElementById('payerName').value || 'Not provided';
+                document.getElementById('summaryPayerRelationship').textContent = document.getElementById('payerRelationship').value || 'Not provided';
+                document.getElementById('summaryPayerEmail').textContent = document.getElementById('payerEmail').value || 'Not provided';
+                document.getElementById('summaryPayerPhone').textContent = document.getElementById('payerPhone').value || 'Not provided';
+                document.getElementById('summaryPayerAddress').textContent = document.getElementById('payerAddress').value || 'Not provided';
+                
+                // Program Details
+                document.getElementById('summaryProgram').textContent = 
+                    getProgramName(document.getElementById('program').value);
+                document.getElementById('summaryStartDate').textContent = formatStartDate(document.getElementById('startDate').value);
+                document.getElementById('summaryStudyMode').textContent = 
+                    document.getElementById('studyMode').value ? 
+                    formatStudyMode(document.getElementById('studyMode').value) : 'Not specified';
+                
+                // Educational Background
+                document.getElementById('summaryEducation').textContent = 
+                    formatEducation(document.getElementById('highestEducation').value);
+                document.getElementById('summaryInstitution').textContent = 
+                    document.getElementById('institution').value || 'Not specified';
+                document.getElementById('summaryGraduation').textContent = 
+                    document.getElementById('graduationYear').value || 'Not specified';
+                
+                // Culinary Experience
+                document.getElementById('summaryExperience').textContent = 
+                    document.getElementById('experience').value || 'None provided';
+                document.getElementById('summarySpecialization').textContent = 
+                    document.getElementById('specialization').value || 'Not specified';
+                
+                // Additional Information
+                document.getElementById('summaryMotivation').textContent = document.getElementById('motivation').value;
+                document.getElementById('summaryHowHeard').textContent = 
+                    document.getElementById('howHeard').value ? 
+                    formatHowHeard(document.getElementById('howHeard').value) : 'Not specified';
+            }
+            
+            // Helper functions for formatting
+            function formatDate(dateString) {
+                if (!dateString) return 'Not specified';
+                const date = new Date(dateString);
+                return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+            }
+            
+            function formatStartDate(dateValue) {
+                if (!dateValue) return 'Not specified';
+                
+                const startDates = {
+                    '2026-02': 'February 2026',
+                    '2026-06': 'June 2026'
+                };
+                
+                return startDates[dateValue] || 'Not specified';
+            }
+            
+            function getProgramName(programValue) {
+                const programs = {
+                    'culinary_arts': 'Culinary Arts',
+                    'baking_pastry': 'Professional Baking & Pastry',
+                    'culinary_management': 'Culinary Management',
+                    'international_cuisine': 'International Cuisine',
+                    'nutrition_wellness': 'Nutrition & Wellness'
+                };
+                return programs[programValue] || 'Not specified';
+            }
+            
+            function formatStudyMode(modeValue) {
+                const modes = {
+                    'full_time': 'Full Time',
+                    'part_time': 'Part Time',
+                    'weekend': 'Weekend Program'
+                };
+                return modes[modeValue] || 'Not specified';
+            }
+            
+            function formatEducation(educationValue) {
+                const educationLevels = {
+                    'high_school': 'High School Diploma',
+                    'associate': 'Associate Degree',
+                    'bachelor': 'Bachelor\'s Degree',
+                    'master': 'Master\'s Degree',
+                    'other': 'Other'
+                };
+                return educationLevels[educationValue] || 'Not specified';
+            }
+            
+            function formatHowHeard(heardValue) {
+                const sources = {
+                    'website': 'Website',
+                    'social_media': 'Social Media',
+                    'friend': 'Friend/Relative',
+                    'event': 'Culinary Event',
+                    'advertisement': 'Advertisement',
+                    'other': 'Other'
+                };
+                return sources[heardValue] || 'Not specified';
+            }
+        });
+    </script>
+
+
+</body>
+</html>
