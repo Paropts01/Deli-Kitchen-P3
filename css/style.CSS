@@ -259,6 +259,11 @@ body {
     transform: rotate(-45deg) translateY(-7px);
 }
 
+/* Add this to your main content to prevent navbar overlap */
+.main-content {
+    margin-top: 100px; /* Adjust this value based on your navbar height */
+}
+
 /* RESPONSIVE NAV */
 @media (max-width: 768px) {
     .navbar {
@@ -323,6 +328,11 @@ body {
     .dropdown.open .dropdown-content {
         display: flex;
         flex-direction: column;
+    }
+
+    /* Remove the top margin on mobile since navbar is now relative */
+    .main-content {
+        margin-top: 0;
     }
 }
         
