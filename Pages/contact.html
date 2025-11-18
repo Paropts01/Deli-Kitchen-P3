@@ -325,23 +325,20 @@ function displaySearchResults(results, searchResults) {
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const form = document.getElementById("inquiryForm");
-
-            // Inputs
             const nameInput = document.getElementById("name");
             const emailInput = document.getElementById("email");
             const messageInput = document.getElementById("message");
 
-            // Error container (inserted automatically)
+            // Create error container
             const errorContainer = document.createElement("div");
             errorContainer.className = "error-messages";
-            errorContainer.style.display = "none";
-            form.prepend(errorContainer);
+            form.insertBefore(errorContainer, form.firstChild);
 
-            // Modal
+            // Modal elements
             const feedbackModal = document.getElementById("feedbackModal");
             const closeModalBtn = document.getElementById("closeModal");
 
-            // ---------- VALIDATION ----------
+            // Form validation
             function validateForm() {
                 let errors = [];
 
@@ -375,23 +372,13 @@ function displaySearchResults(results, searchResults) {
                 return true;
             }
 
-            // ---------- SIMULATED AJAX SUBMISSION ----------
-            function submitForm() {
-                // Simulate sending process (1 second delay)
-                setTimeout(() => {
-                    showFeedbackModal();
-                    form.reset();
-                }, 1000);
-            }
-
-          // In your existing DOMContentLoaded function, replace these parts:
-
-            // ---------- SHOW MODAL ----------
+            // Show modal function
             function showFeedbackModal() {
+                console.log("Showing modal"); // Debug log
                 feedbackModal.style.display = "block";
             }
 
-            // ---------- CLOSE MODAL ----------
+            // Close modal functions
             closeModalBtn.addEventListener("click", () => {
                 feedbackModal.style.display = "none";
             });
@@ -402,16 +389,25 @@ function displaySearchResults(results, searchResults) {
                 }
             });
 
-            // ---------- FORM SUBMIT ----------
+            // Form submission
             form.addEventListener("submit", (e) => {
                 e.preventDefault();
+                console.log("Form submitted"); // Debug log
 
                 if (validateForm()) {
-                    submitForm();
+                    console.log("Form is valid, showing modal"); // Debug log
+                    showFeedbackModal();
+                    form.reset();
                 }
             });
+
+            // Debug: Check if elements exist
+            console.log("Form:", form);
+            console.log("Modal:", feedbackModal);
+            console.log("Close button:", closeModalBtn);
         });
     </script>
+    
    
 
 

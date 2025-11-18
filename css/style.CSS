@@ -1151,53 +1151,106 @@ textarea.form-control {
   height: 300px;
   border: none;
 }
-/* Modal Background */
-.modals {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-}
+ /* Modal Background */
+        .modals {
+            display: none;
+            position: fixed;
+            z-index: 10000; /* Increased z-index */
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+        }
 
-/* Modal Content Box - MOVED DOWN */
-.modal-content {
-    background: #fff;
-    width: 90%;
-    max-width: 400px;
-    margin: 15% auto; /* Changed from 8% to 15% to move down */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
+        /* Modal Content Box */
+        .modal-content {
+            background: #fff;
+            width: 90%;
+            max-width: 400px;
+            margin: 15% auto;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+        }
 
-/* Close Button */
-.close {
-    float: right;
-    font-size: 28px;
-    cursor: pointer;
-}
+        /* Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 20px;
+            font-size: 28px;
+            cursor: pointer;
+            color: #7f8c8d;
+            line-height: 1;
+        }
 
-.close:hover {
-    color: red;
-}
+        .close:hover {
+            color: #e74c3c;
+        }
 
-/* Error messages styling */
-.error-messages p {
-    color: #d8000c;
-    background: #ffbaba;
-    padding: 8px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    font-size: 14px;
-    font-size: 14px;
-}   
+        /* Form Styles */
+        .contact-form {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
+        .form-group {
+            margin-bottom: 20px;
+        }
 
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
 
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        .btn {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        .error-messages {
+            background: #ffebee;
+            border: 1px solid #ffcdd2;
+            border-radius: 6px;
+            padding: 15px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .error-messages p {
+            color: #d8000c;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
 
 
 /* FOOTER CSS*/
