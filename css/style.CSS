@@ -1152,6 +1152,7 @@ textarea.form-control {
   border: none;
 }
 /* Modal Background */
+/* Modal Background */
 .modals {
     display: none;
     position: fixed;
@@ -1164,12 +1165,12 @@ textarea.form-control {
     animation: fadeIn 0.3s;
 }
 
-/* Modal Content Box */
+/* Modal Content Box - CENTERED FIX */
 .modal-content {
     background: #fff;
     width: 90%;
     max-width: 400px;
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
     text-align: center;
     position: absolute;
@@ -1180,27 +1181,33 @@ textarea.form-control {
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
 }
 
-/* Close Button */
+/* Close Button - POSITION FIX */
 .close {
-    float: right;
+    position: absolute;
+    top: 15px;
+    right: 20px;
     font-size: 28px;
     cursor: pointer;
+    color: #7f8c8d;
+    transition: color 0.3s;
     line-height: 1;
-    margin-top: -5px;
 }
 
 .close:hover {
-    color: red;
+    color: #e74c3c;
 }
 
-/* Error messages styling */
-.error-messages p {
-    color: #d8000c;
-    background: #ffbaba;
-    padding: 8px;
-    border-radius: 5px;
-    margin-bottom: 5px;
-    font-size: 14px;
+/* Modal Content Styling */
+.modal-content h2 {
+    color: #27ae60;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+
+.modal-content p {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    line-height: 1.5;
 }
 
 /* Animations */
@@ -1220,62 +1227,17 @@ textarea.form-control {
     }
 }
 
-/* Responsive Design */
+/* Responsive Modal */
 @media screen and (max-width: 480px) {
     .modal-content {
         width: 95%;
-        padding: 15px;
-        margin: 10px;
+        padding: 20px;
     }
     
     .close {
         font-size: 24px;
-        margin-top: -3px;
-    }
-    
-    .modal-content h2 {
-        font-size: 1.3rem;
-        margin: 10px 0;
-    }
-    
-    .modal-content p {
-        font-size: 0.9rem;
-        line-height: 1.4;
-    }
-}
-
-@media screen and (max-width: 320px) {
-    .modal-content {
-        padding: 12px;
-    }
-    
-    .close {
-        font-size: 20px;
-    }
-    
-    .modal-content h2 {
-        font-size: 1.2rem;
-    }
-    
-    .modal-content p {
-        font-size: 0.85rem;
-    }
-}
-
-/* For very tall screens */
-@media screen and (max-height: 500px) and (orientation: landscape) {
-    .modal-content {
-        max-height: 90vh;
-        overflow-y: auto;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-
-/* High-resolution displays */
-@media screen and (min-resolution: 2dppx) {
-    .modal-content {
-        border: 0.5px solid #e0e0e0;
+        top: 10px;
+        right: 15px;
     }
 }
 
