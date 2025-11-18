@@ -1176,6 +1176,8 @@ textarea.form-control {
             box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
         }
 
+        
+
         /* Close Button */
         .close {
             position: absolute;
@@ -1191,66 +1193,9 @@ textarea.form-control {
             color: #e74c3c;
         }
 
-        /* Form Styles */
-        .contact-form {
-            max-width: 500px;
-            margin: 0 auto;
-            padding: 20px;
-        }
 
-        .form-group {
-            margin-bottom: 20px;
-        }
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 600;
-        }
 
-        .form-control {
-            width: 100%;
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 6px;
-            font-size: 16px;
-        }
-
-        textarea.form-control {
-            min-height: 120px;
-            resize: vertical;
-        }
-
-        .btn {
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            width: 100%;
-        }
-
-        .btn:hover {
-            background: #2980b9;
-        }
-
-        .error-messages {
-            background: #ffebee;
-            border: 1px solid #ffcdd2;
-            border-radius: 6px;
-            padding: 15px;
-            margin-bottom: 20px;
-            display: none;
-        }
-
-        .error-messages p {
-            color: #d8000c;
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
 
 
 /* FOOTER CSS*/
