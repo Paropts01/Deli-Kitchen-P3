@@ -64,6 +64,7 @@ body {
 }
 
   /* NAVBAR CSS */
+/* NAVBAR CSS */
 .navbar {
     position: fixed;
     top: 0;
@@ -259,15 +260,20 @@ body {
     transform: rotate(-45deg) translateY(-7px);
 }
 
-/* Add this to your main content to prevent navbar overlap */
-.main-content {
-    margin-top: 100px; /* Adjust this value based on your navbar height */
+/* Add padding to body to account for fixed navbar on desktop */
+body {
+    padding-top: 100px;
 }
 
 /* RESPONSIVE NAV */
 @media (max-width: 768px) {
     .navbar {
         position: relative; /* Changed from fixed to relative */
+    }
+
+    /* Remove body padding on mobile since navbar is now relative */
+    body {
+        padding-top: 0;
     }
 
     .hamburger {
@@ -328,11 +334,6 @@ body {
     .dropdown.open .dropdown-content {
         display: flex;
         flex-direction: column;
-    }
-
-    /* Remove the top margin on mobile since navbar is now relative */
-    .main-content {
-        margin-top: 0;
     }
 }
         
@@ -1150,7 +1151,6 @@ textarea.form-control {
   height: 300px;
   border: none;
 }
-
 /* Modal Background */
 .modals {
     display: none;
@@ -1161,6 +1161,7 @@ textarea.form-control {
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.5);
+    animation: fadeIn 0.3s;
 }
 
 /* Modal Content Box */
@@ -1168,10 +1169,15 @@ textarea.form-control {
     background: #fff;
     width: 90%;
     max-width: 400px;
-    margin: 8% auto;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: slideIn 0.4s;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
 }
 
 /* Close Button */
@@ -1179,6 +1185,8 @@ textarea.form-control {
     float: right;
     font-size: 28px;
     cursor: pointer;
+    line-height: 1;
+    margin-top: -5px;
 }
 
 .close:hover {
@@ -1193,6 +1201,82 @@ textarea.form-control {
     border-radius: 5px;
     margin-bottom: 5px;
     font-size: 14px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { 
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to { 
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Responsive Design */
+@media screen and (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+        margin: 10px;
+    }
+    
+    .close {
+        font-size: 24px;
+        margin-top: -3px;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.3rem;
+        margin: 10px 0;
+    }
+    
+    .modal-content p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .modal-content {
+        padding: 12px;
+    }
+    
+    .close {
+        font-size: 20px;
+    }
+    
+    .modal-content h2 {
+        font-size: 1.2rem;
+    }
+    
+    .modal-content p {
+        font-size: 0.85rem;
+    }
+}
+
+/* For very tall screens */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    .modal-content {
+        max-height: 90vh;
+        overflow-y: auto;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* High-resolution displays */
+@media screen and (min-resolution: 2dppx) {
+    .modal-content {
+        border: 0.5px solid #e0e0e0;
+    }
 }
 
 

@@ -319,93 +319,92 @@ function displaySearchResults(results, searchResults) {
     </script>
 
     <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const form = document.getElementById("inquiryForm");
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("inquiryForm");
 
-    // Inputs
-    const nameInput = document.getElementById("name");
-    const emailInput = document.getElementById("email");
-    const messageInput = document.getElementById("message");
+            // Inputs
+            const nameInput = document.getElementById("name");
+            const emailInput = document.getElementById("email");
+            const messageInput = document.getElementById("message");
 
-    // Error container (inserted automatically)
-    const errorContainer = document.createElement("div");
-    errorContainer.className = "error-messages";
-    errorContainer.style.display = "none";
-    form.prepend(errorContainer);
+            // Error container (inserted automatically)
+            const errorContainer = document.createElement("div");
+            errorContainer.className = "error-messages";
+            errorContainer.style.display = "none";
+            form.prepend(errorContainer);
 
-    // Modal
-    const feedbackModal = document.getElementById("feedbackModal");
-    const closeModalBtn = document.getElementById("closeModal");
+            // Modal
+            const feedbackModal = document.getElementById("feedbackModal");
+            const closeModalBtn = document.getElementById("closeModal");
 
-    // ---------- VALIDATION ----------
-    function validateForm() {
-        let errors = [];
+            // ---------- VALIDATION ----------
+            function validateForm() {
+                let errors = [];
 
-        if (!nameInput.value.trim()) {
-            errors.push("Full Name is required.");
-        }
+                if (!nameInput.value.trim()) {
+                    errors.push("Full Name is required.");
+                }
 
-        if (!emailInput.value.trim()) {
-            errors.push("Email Address is required.");
-        } else if (!/\S+@\S+\.\S+/.test(emailInput.value)) {
-            errors.push("Enter a valid email address.");
-        }
+                if (!emailInput.value.trim()) {
+                    errors.push("Email Address is required.");
+                } else if (!/\S+@\S+\.\S+/.test(emailInput.value)) {
+                    errors.push("Enter a valid email address.");
+                }
 
-        if (!messageInput.value.trim()) {
-            errors.push("Message cannot be empty.");
-        }
+                if (!messageInput.value.trim()) {
+                    errors.push("Message cannot be empty.");
+                }
 
-        // Show errors if found
-        errorContainer.innerHTML = "";
-        if (errors.length > 0) {
-            errors.forEach(err => {
-                const p = document.createElement("p");
-                p.textContent = err;
-                errorContainer.appendChild(p);
+                // Show errors if found
+                errorContainer.innerHTML = "";
+                if (errors.length > 0) {
+                    errors.forEach(err => {
+                        const p = document.createElement("p");
+                        p.textContent = err;
+                        errorContainer.appendChild(p);
+                    });
+                    errorContainer.style.display = "block";
+                    return false;
+                }
+
+                errorContainer.style.display = "none";
+                return true;
+            }
+
+            // ---------- SIMULATED AJAX SUBMISSION ----------
+            function submitForm() {
+                // Simulate sending process (1 second delay)
+                setTimeout(() => {
+                    showFeedbackModal();
+                    form.reset();
+                }, 1000);
+            }
+
+            // ---------- SHOW MODAL ----------
+            function showFeedbackModal() {
+                feedbackModal.style.display = "block";
+            }
+
+            // ---------- CLOSE MODAL ----------
+            closeModalBtn.addEventListener("click", () => {
+                feedbackModal.style.display = "none";
             });
-            errorContainer.style.display = "block";
-            return false;
-        }
 
-        errorContainer.style.display = "none";
-        return true;
-    }
+            window.addEventListener("click", (e) => {
+                if (e.target === feedbackModal) {
+                    feedbackModal.style.display = "none";
+                }
+            });
 
-    // ---------- SIMULATED AJAX SUBMISSION ----------
-    function submitForm() {
-        // Simulate sending process (1 second delay)
-        setTimeout(() => {
-            showFeedbackModal();
-            form.reset();
-        }, 1000);
-    }
+            // ---------- FORM SUBMIT ----------
+            form.addEventListener("submit", (e) => {
+                e.preventDefault();
 
-    // ---------- SHOW MODAL ----------
-    function showFeedbackModal() {
-        feedbackModal.style.display = "block";
-    }
-
-    // ---------- CLOSE MODAL ----------
-    closeModalBtn.addEventListener("click", () => {
-        feedbackModal.style.display = "none";
-    });
-
-    window.addEventListener("click", (e) => {
-        if (e.target === feedbackModal) {
-            feedbackModal.style.display = "none";
-        }
-    });
-
-    // ---------- FORM SUBMIT ----------
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-
-        if (validateForm()) {
-            submitForm();
-        }
-    });
-});
-
+                if (validateForm()) {
+                    submitForm();
+                }
+            });
+        });
     </script>
    
 
