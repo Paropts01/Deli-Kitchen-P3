@@ -1152,7 +1152,6 @@ textarea.form-control {
   border: none;
 }
 /* Modal Background */
-/* Modal Background */
 .modals {
     display: none;
     position: fixed;
@@ -1164,12 +1163,12 @@ textarea.form-control {
     background: rgba(0,0,0,0.5);
 }
 
-/* Modal Content Box - NO CENTERING */
+/* Modal Content Box - MOVED DOWN */
 .modal-content {
     background: #fff;
     width: 90%;
     max-width: 400px;
-    margin: 8% auto;
+    margin: 15% auto; /* Changed from 8% to 15% to move down */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -1194,7 +1193,9 @@ textarea.form-control {
     border-radius: 5px;
     margin-bottom: 5px;
     font-size: 14px;
-}
+    font-size: 14px;
+}   
+
 
 
 
