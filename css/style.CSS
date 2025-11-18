@@ -63,7 +63,6 @@ body {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-  /* NAVBAR CSS */
 /* NAVBAR CSS */
 .navbar {
     position: fixed;
@@ -260,7 +259,7 @@ body {
     transform: rotate(-45deg) translateY(-7px);
 }
 
-/* Add padding to body to account for fixed navbar on desktop */
+/* padding to body to account for fixed navbar on desktop */
 body {
     padding-top: 100px;
 }
@@ -268,10 +267,9 @@ body {
 /* RESPONSIVE NAV */
 @media (max-width: 768px) {
     .navbar {
-        position: relative; /* Changed from fixed to relative */
+        position: relative; 
     }
 
-    /* Remove body padding on mobile since navbar is now relative */
     body {
         padding-top: 0;
     }
@@ -336,7 +334,9 @@ body {
         flex-direction: column;
     }
 }
-        
+   
+
+
 /* HERO SECTIONS CSS */
 .hero {
   background-color: #f3c68f;
