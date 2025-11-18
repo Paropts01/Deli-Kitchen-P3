@@ -470,43 +470,43 @@ body {
 /* MOBILE RESPONSIVE STYLES */
 @media screen and (max-width: 768px) {
   .slideshow-container {
-    height: 60vh; /* Reduce height on mobile */
+    height: 60vh; 
   }
   
   .mySlides img {
-    object-fit: cover; /* Ensure images cover the container nicely */
-    object-position: center; /* Center the image focus */
+    object-fit: cover; 
+    object-position: center; 
   }
   
   .prev, .next {
-    padding: 12px; /* Smaller padding */
-    font-size: 24px; /* Smaller arrows */
-    background-color: rgba(0,0,0,0.7); /* More visible on mobile */
+    padding: 12px; 
+    font-size: 24px; 
+    background-color: rgba(0,0,0,0.7); 
   }
   
-  .next { right: 10px; } /* Bring arrows closer to edges */
+  .next { right: 10px; } 
   .prev { left: 10px; }
   
   .slide-text {
-    bottom: 15%; /* Adjust position */
+    bottom: 15%; 
     left: 5%;
-    right: 5%; /* Add right margin */
-    max-width: none; /* Remove max-width constraint */
-    padding: 15px 20px; /* Smaller padding */
-    text-align: center; /* Center text on mobile */
+    right: 5%; 
+    max-width: none;
+    padding: 15px 20px; 
+    text-align: center; 
   }
   
   .slide-text h2 {
-    font-size: 1.5em; /* Smaller heading */
+    font-size: 1.5em; 
     margin-bottom: 8px;
   }
   
   .slide-text p {
-    font-size: 0.9em; /* Smaller paragraph text */
+    font-size: 0.9em; 
   }
   
   .numbertext {
-    font-size: 14px; /* Smaller number text */
+    font-size: 14px; 
     padding: 6px 10px;
   }
 }
@@ -514,7 +514,7 @@ body {
 /* Extra small devices */
 @media screen and (max-width: 480px) {
   .slideshow-container {
-    height: 50vh; /* Even smaller height on very small screens */
+    height: 50vh; 
   }
   
   .prev, .next {
@@ -539,12 +539,12 @@ body {
 /* Landscape orientation on mobile */
 @media screen and (max-height: 500px) and (orientation: landscape) {
   .slideshow-container {
-    height: 80vh; /* Adjust height for landscape */
+    height: 80vh;
   }
   
   .slide-text {
-    bottom: 5%; /* Move text higher in landscape */
-    max-width: 70%; /* Limit width in landscape */
+    bottom: 5%; 
+    max-width: 70%; 
   }
 }
 
