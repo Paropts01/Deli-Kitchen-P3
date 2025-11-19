@@ -123,9 +123,14 @@ Deli Kitchen/
 - added a dropdown link on the navbar called programs
 - created 16 pages of programs
 
-# changelog v3 (06/11/2025)
+# changelog v3 (05/11/2025)
+- created a more detailed footer
+- adjusted my logo to stay on the right
+- created a new hamburge that accomodates the dropdown link(but could not accomodate all the 16 links)
+- updated the javascript for hamburger and dropdown link.
 
 # changelog v1 (06/11/2025)
+- added the now content on contact, about, 
 
 # changelog v1 (06/11/2025)
 
