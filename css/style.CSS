@@ -1722,42 +1722,42 @@ font-size: 1.5rem;
  }
  }  
 
-        /* Mission Section CSS*/
-        .mission {
-            padding: 100px 0;
-            background-color: #FFF5EB;
-        }
+/* Mission Section CSS*/
+.mission {
+padding: 100px 0;
+background-color: #FFF5EB;
+}
 
-        .mission-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+.mission-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+ gap: 30px;
+}
 
-        .mission-card {
-            background-color: white;
-            padding: 40px 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            transition: transform 0.3s;
-        }
+.mission-card {
+background-color: white;
+padding: 40px 30px;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+text-align: center;
+transition: transform 0.3s;
+}
 
-        .mission-card:hover {
-            transform: translateY(-10px);
-        }
+.mission-card:hover {
+transform: translateY(-10px);
+ }
 
-        .mission-icon {
-            font-size: 3rem;
-            color: #FF8C00;
-            margin-bottom: 20px;
-        }
+.mission-icon {
+font-size: 3rem;
+color: #FF8C00;
+margin-bottom: 20px;
+}
 
-        .mission-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #000000;
-        }
+.mission-card h3 {
+font-size: 1.5rem;
+ margin-bottom: 15px;
+ color: #000000;
+ }
 
         /* Team Section CSS*/
         .team {
