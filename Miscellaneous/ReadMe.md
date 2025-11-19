@@ -136,7 +136,13 @@ Deli Kitchen/
 - added the student life link on navbar
 - added content on student life page
 
-# changelog v1 (06/11/2025)
+# changelog v5 (10/11/2025)
+- deleted the form on the apply page and added a new one
+- deleted 11 program pages leaving only main 5 programs required at a culinary school.
+- the main program pages are culinary arts, baking and pastry arts, culinary management, international cuisine, nutrition and wellness
+- updated the content of this pages
+- added the extra image for the header of thi paged
+- updated the css  
 
 # changelog v1 (06/11/2025)
 
