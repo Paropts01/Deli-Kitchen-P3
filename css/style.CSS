@@ -1817,51 +1817,51 @@ color: #666;
 font-size: 0.9rem;
 }
 
-        /* Values Section CSS*/
-        .values {
-            padding: 100px 0;
-            background-color: #FFF5EB;
-        }
+/* Values Section CSS*/
+.values {
+padding: 100px 0;
+background-color: #FFF5EB;
+}
 
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
+.values-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+gap: 30px;
+}
 
-        .value-card {
-            background-color: white;
-            padding: 40px 30px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            text-align: center;
-            transition: transform 0.3s;
-        }
+.value-card {
+background-color: white;
+padding: 40px 30px;
+border-radius: 10px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+text-align: center;
+transition: transform 0.3s;
+}
 
-        .value-card:hover {
-            transform: translateY(-5px);
-        }
+.value-card:hover {
+transform: translateY(-5px);
+}
 
-        .value-icon {
-            width: 80px;
-            height: 80px;
-            background-color: #FFF5EB;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 20px;
-            color: #FF8C00;
-            font-size: 2rem;
-        }
+.value-icon {
+width: 80px;
+height: 80px;
+background-color: #FFF5EB;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 0 auto 20px;
+color: #FF8C00;
+font-size: 2rem;
+}
 
-        .value-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-            color: #000000;
-        }
+.value-card h3 {
+font-size: 1.5rem;
+margin-bottom: 15px;
+color: #000000;
+}
 
-        /* HISTORY SECTION CSS*/
+/* HISTORY SECTION CSS*/
 .history {
   padding: 100px 0;
   background-color: white;
