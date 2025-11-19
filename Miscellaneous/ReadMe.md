@@ -129,8 +129,12 @@ Deli Kitchen/
 - created a new hamburge that accomodates the dropdown link(but could not accomodate all the 16 links)
 - updated the javascript for hamburger and dropdown link.
 
-# changelog v1 (06/11/2025)
-- added the now content on contact, about, 
+# changelog v4 (06/11/2025)
+- added the now content on contact, about, apply page
+- css styling for this pages and the javascript
+- added a new page called the student life
+- added the student life link on navbar
+- added content on student life page
 
 # changelog v1 (06/11/2025)
 
