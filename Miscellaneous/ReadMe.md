@@ -92,11 +92,11 @@ Deli Kitchen/
 
 # impovements based on part one and part 2 (according to feedback)
 - part1 improvements
-- created a read me file and filled all the required details
+- created a read me file and filled all the required details on part i did submitted an empty readme file
 
 - part 2 improvements
-- removed any internal styiling
-- improved my skills on part 1 feedback, css styling.
+- removed any internal styiling as on part 2 i had internal css
+- improved my css skills on part 2 feedback, on the css styling. now my css is acceptable
 
 # changelog v1 (06/11/2025)
 - deleted all of the main content on the index page of part 2
