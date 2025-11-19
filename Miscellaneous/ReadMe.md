@@ -164,7 +164,12 @@ added new content on student life page
 - added an improved css and javascript for the dropdown link
 - added a more advanced responsiveness on css
 
-# changelog v1 (06/11/2025)
+# changelog v8 (14/11/2025)
+- added the lightbox javascript, css and html to home page, about page and student life page
+- updated the hamburger and dropdown javascript.
+- added student stories, announcement section, and why us section on home page
+- fixed javascript for application form progress bar
+- added searchbar features and javascript plus css
 
 # changelog v1 (06/11/2025)
 
