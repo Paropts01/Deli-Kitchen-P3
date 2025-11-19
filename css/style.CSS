@@ -1759,63 +1759,63 @@ font-size: 1.5rem;
  color: #000000;
  }
 
-        /* Team Section CSS*/
-        .team {
-            padding: 100px 0;
-            background-color: white;
-        }
+/* Team Section CSS*/
+.team {
+padding: 100px 0;
+background-color: white;
+}
 
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-        }
+.team-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+gap: 30px;
+}
 
-        .team-member {
-            text-align: center;
-            background-color: white;
-            border-radius: 10px;
-            padding: 30px 20px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s;
-        }
+.team-member {
+text-align: center;
+background-color: white;
+border-radius: 10px;
+padding: 30px 20px;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+transition: transform 0.3s;
+}
 
-        .team-member:hover {
-            transform: translateY(-5px);
-        }
+.team-member:hover {
+transform: translateY(-5px);
+}
 
-        .member-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            overflow: hidden;
-            margin: 0 auto 20px;
-            border: 5px solid #FFF5EB;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
+.member-photo {
+width: 150px;
+height: 150px;
+border-radius: 50%;
+overflow: hidden;
+margin: 0 auto 20px;
+border: 5px solid #FFF5EB;
+box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
 
-        .member-photo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
+.member-photo img {
+width: 100%;
+height: 100%;
+object-fit: cover;
+ }
 
-        .team-member h3 {
-            font-size: 1.3rem;
-            margin-bottom: 5px;
-            color: #000000;
-        }
+.team-member h3 {
+font-size: 1.3rem;
+margin-bottom: 5px;
+color: #000000;
+}
 
-        .team-member p {
-            color: #FF8C00;
-            font-weight: 500;
-            margin-bottom: 10px;
-        }
+.team-member p {
+color: #FF8C00;
+font-weight: 500;
+margin-bottom: 10px;
+}
 
-        .team-member .experience {
-            color: #666;
-            font-size: 0.9rem;
-        }
+.team-member .experience {
+color: #666;
+font-size: 0.9rem;
+}
 
         /* Values Section CSS*/
         .values {
