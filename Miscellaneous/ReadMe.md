@@ -182,7 +182,11 @@ added new content on student life page
 - updated the search feature's html, css and javascript
 - updated the responsiveness for navbar and slide show
 
-# changelog v1 (06/11/2025)
+# changelog v11 (18/11/2025)
+- updated final part of search feature on javascript and css and html
+- deletd the multistep form on apply page and added the final apply form
+- transferred all the pages codes to the main folder
+ 
 
 
 # Responsiveness
