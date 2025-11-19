@@ -108,9 +108,33 @@ Deli Kitchen/
 -added a more modern and better content on all pages
 
 
-# changelog v1 (06/11/2025)
+# changelog v1 (01/11/2025)
 - deleted all of the main content on the index page of part 2
-- added a slideshow
+- deletd all the content on the rest of the pages
+- removed the internal css styling
+- deleted all the css on the css.style file
+- created a dummy website and started with naviagation bar form scratch after it was done i imported it to main website.
+
+# changelog v2 (06/11/2025)
+
+# changelog v3 (06/11/2025)
+
+# changelog v1 (06/11/2025)
+
+# changelog v1 (06/11/2025)
+
+# changelog v1 (06/11/2025)
+
+# changelog v1 (06/11/2025)
+
+# changelog v1 (06/11/2025)
+
+# changelog v1 (06/11/2025)
+
+# changelog v1 (06/11/2025)
+
+# changelog v1 (06/11/2025)
+
 
 # Responsiveness
 - .Assets/mobile S 320px
