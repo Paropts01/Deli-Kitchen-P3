@@ -196,12 +196,11 @@ added new content on student life page
 - ran and debugged
 
 
-# Responsiveness
-- .Assets/mobile S 320px
-- .Assets/mobile M 375px
-- .Assets/tablet 768px
-- .Assets/laptop 1024px
-- .Assets/laptop L 1440px
+# Responsiveness part 3 version
+- .Assets/responsive laptop official
+- .Assets/responsive tablet official
+- .Assets/responsive phone official
+
 
 # Installation
 - Download or clone this repository.
