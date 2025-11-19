@@ -98,6 +98,16 @@ Deli Kitchen/
 - removed any internal styiling as on part 2 i had internal css
 - improved my css skills on part 2 feedback, on the css styling. now my css is acceptable
 
+# improvements on my skills
+- i made my navbar fixed for modern styling
+- added a dropdown link for programs to make accesing programs easier
+- removed background picture so the texts may be visible and replaced it with slideshow on home page
+- removed the never ending forms on all pages to make ccs styling a bit less complicated
+- changed the enroll naming to apply for an easier understanding
+- made a more detailed footer
+-added a more modern and better content on all pages
+
+
 # changelog v1 (06/11/2025)
 - deleted all of the main content on the index page of part 2
 - added a slideshow
