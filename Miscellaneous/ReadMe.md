@@ -113,9 +113,15 @@ Deli Kitchen/
 - deletd all the content on the rest of the pages
 - removed the internal css styling
 - deleted all the css on the css.style file
-- created a dummy website and started with naviagation bar form scratch after it was done i imported it to main website.
+- created a dummy website called cooking scool and started with naviagation bar form scratch after it was done i imported it to main website.
 
-# changelog v2 (06/11/2025)
+# changelog v2 (04/11/2025)
+- on dummy website i created a slide show on the home page 
+- created the program cards and the head section
+- added a code that opens the programs on a new tab if the learn more button is pressed on the program cards
+- trnsferred the codes to main website
+- added a dropdown link on the navbar called programs
+- created 16 pages of programs
 
 # changelog v3 (06/11/2025)
 
