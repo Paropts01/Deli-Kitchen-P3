@@ -171,7 +171,12 @@ added new content on student life page
 - fixed javascript for application form progress bar
 - added searchbar features and javascript plus css
 
-# changelog v1 (06/11/2025)
+# changelog v9 (15/11/2025)
+- added seo titles
+- added the seo mata description
+- put the separated javascripts in onejavascript tag
+- uddated readme file
+- ran and debugged
 
 # changelog v1 (06/11/2025)
 
