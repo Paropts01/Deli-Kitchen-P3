@@ -136,6 +136,16 @@ Deli Kitchen/
 - added the student life link on navbar
 - added content on student life page
 
+# changelog v5 (08/11/2025)
+- added new contents on contact page and css
+- equiry form
+- map container
+- business hours
+- contact details card
+- hrading section
+
+# changelog v1 (/11/2025)
+
 # changelog v5 (10/11/2025)
 - deleted the form on the apply page and added a new one
 - deleted 11 program pages leaving only main 5 programs required at a culinary school.
@@ -147,7 +157,7 @@ Deli Kitchen/
 # changelog v6 (11/11/2025)
 - added an impred css and javascript for the dropdown link
 
-# changelog v1 (06/11/2025)
+
 
 # changelog v1 (06/11/2025)
 
