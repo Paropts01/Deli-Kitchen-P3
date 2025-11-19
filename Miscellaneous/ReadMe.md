@@ -178,7 +178,9 @@ added new content on student life page
 - uddated readme file
 - ran and debugged
 
-# changelog v1 (06/11/2025)
+# changelog v10 (17/11/2025)
+- updated the search feature's html, css and javascript
+- updated the responsiveness for navbar and slide show
 
 # changelog v1 (06/11/2025)
 
