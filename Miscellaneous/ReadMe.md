@@ -16,6 +16,15 @@ this website its all about user interaction and creativity. creativity in this w
 - background image for home page, about us page, contact us page
 - footer
 
+# Part 3 features added
+- search filter is added
+- modals
+- cards
+- deailed footer
+- light box
+- more clearer images
+- new pages are introduded
+
 
 # File & file structure
 Deli Kitchen/
