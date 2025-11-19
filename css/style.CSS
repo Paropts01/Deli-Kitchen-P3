@@ -1698,29 +1698,29 @@ color: #e74c3c;
             transform: scale(1.05);
         }
 
-      /* Mobile styles */
-        @media (max-width: 768px) {
-            .aboutus {
-                padding: 60px 0;
-            }
+/* Mobile styles */
+@media (max-width: 768px) {
+.aboutus {
+padding: 60px 0;
+ }
             
-            .section-title {
-                margin-bottom: 40px;
-            }
+.section-title {
+ margin-bottom: 40px;
+}
             
-            .section-title h2 {
-                font-size: 2rem;
-            }
+.section-title h2 {
+font-size: 2rem;
+ }
             
-            .about-content {
-                flex-direction: column;
-                gap: 30px;
-            }
+.about-content {
+flex-direction: column;
+gap: 30px;
+}
             
-            .about-text h3 {
-                font-size: 1.5rem;
-            }
-        }  
+.about-text h3 {
+font-size: 1.5rem;
+ }
+ }  
 
         /* Mission Section CSS*/
         .mission {
