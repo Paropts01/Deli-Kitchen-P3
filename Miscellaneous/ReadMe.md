@@ -144,7 +144,13 @@ Deli Kitchen/
 - contact details card
 - hrading section
 
-# changelog v1 (/11/2025)
+# changelog v6 (09/11/2025)
+added new content on student life page
+- events section
+- organisations section
+- housing section
+- stories section
+- stats section
 
 # changelog v5 (10/11/2025)
 - deleted the form on the apply page and added a new one
