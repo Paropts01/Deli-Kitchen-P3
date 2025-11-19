@@ -2,8 +2,8 @@
 
 
 # About Deli kkitchen
-deli kitchen is a static website for a cooking school. it is build using HTML, CSS so far.
-it shows basic website strucrure, creativity and critical thinking skills for learning purposes. 
+deli kitchen is a website for a cooking school. it is build using HTML, CSS and Javascript.
+this website its all about user interaction and creativity. creativity in this website attracts users to want to now more about this culinary scool and the javascript validation is there to make this website more user friendly. all the prorams this school has to offer, the people who will be responsible for teaching and the student life content are there to let the user explore deli kitchen cooking school online.  
 
 # Features
 - website logo on the navbar
