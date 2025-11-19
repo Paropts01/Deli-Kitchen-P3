@@ -191,7 +191,9 @@ added new content on student life page
 - fixed css structures
 - commented 
 - updated the readme file
-
+- added year html code and javascripts on all pages
+- updated the read me file
+- ran and debugged
 
 
 # Responsiveness
