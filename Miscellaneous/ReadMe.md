@@ -203,9 +203,9 @@ added new content on student life page
 
 
 # Installation
-- Download or clone this repository.
-- Open the index.html file in any modern browser.
-- No server setup is required (static website).
+- Download or clone this repository from github.
+- Open the folder using any developing tool but reccomended one is visual studio.
+- No server setup is required .
 
 # Dependencies
 - Font Awesome -> for icons
