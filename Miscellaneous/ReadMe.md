@@ -160,10 +160,9 @@ added new content on student life page
 - added the extra image for the header of thi paged
 - updated the css  
 
-# changelog v6 (11/11/2025)
-- added an impred css and javascript for the dropdown link
-
-
+# changelog v7   (11/11/2025)
+- added an improved css and javascript for the dropdown link
+- added a more advanced responsiveness on css
 
 # changelog v1 (06/11/2025)
 
