@@ -2864,22 +2864,21 @@ transition: background-color 0.3s;
 .story-card .btn:hover {
 background-color: #eeda97;
 }
-
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .modal-content {
-                width: 95%;
-                margin: 10% auto;
-            }
+ /* Responsive adjustments */
+@media (max-width: 768px) {
+.modal-content {
+ width: 95%;
+ margin: 10% auto;
+ }
             
-            .modal-body {
-                padding: 1.5rem;
-            }
+.modal-body {
+padding: 1.5rem;
+}
             
-            .stories-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+.stories-grid {
+grid-template-columns: 1fr;
+}
+}
 
 
         /* Application Form Styles */
