@@ -144,7 +144,8 @@ Deli Kitchen/
 - added the extra image for the header of thi paged
 - updated the css  
 
-# changelog v1 (06/11/2025)
+# changelog v6 (11/11/2025)
+- added an impred css and javascript for the dropdown link
 
 # changelog v1 (06/11/2025)
 
