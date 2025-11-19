@@ -290,6 +290,33 @@ function displaySearchResults(results, searchResults) {
                 }
             }
         });
+
+        // ---------------------------year javascript-----------------
+function updateCopyrightYear() {
+    try {
+        const yearElement = document.getElementById('auto-year');
+        if (!yearElement) return;
+        
+        const currentYear = new Date().getFullYear();
+        const startYear = parseInt(yearElement.getAttribute('data-start-year')) || currentYear;
+        
+        if (currentYear > startYear) {
+            yearElement.textContent = `${startYear}-${currentYear}`;
+        } else {
+            yearElement.textContent = `${startYear}`;
+        }
+    } catch (error) {
+        console.error('Error updating copyright year:', error);
+    }
+}
+
+// Initialize and set up automatic updates
+document.addEventListener('DOMContentLoaded', function() {
+    updateCopyrightYear();
+    
+    // Check for year change every hour (more efficient than daily)
+    setInterval(updateCopyrightYear, 60 * 60 * 1000);
+});
     </script>
 </body>
 </html>
