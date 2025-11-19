@@ -225,6 +225,8 @@ added new content on student life page
 
 # References
 
+part 2
+
 - YouTube. Accessed on :(12, September, 2025). Retrieved from YouTube : https://www.youtube.com/watch?v=SdhmvnwOM2E 
 
 - W3Schools. Accessed on :(18, September, 2025). Retrieved from W3Schools: https://www.w3schools.com/css/css_image_gallery.asp#gsc.tab=0&gsc.q=how%20make%20background%20img%20on%20navbar
@@ -241,7 +243,11 @@ added new content on student life page
 
 - pexels. Accessed on :(23, September, 2025). Retrieved from Pexels: https://www.pexels.com/photo/assorted-salads-on-bowls-1640773/
 
+part 3
 
+- w3schools. Accesed on ; (04/11/2025).Retrieved from w3schools:https://www.w3schools.com/
+- deepseek. Accesed on ; (05/11/2025 - 18/11/2025).Retrieved from depseek: https://chat.deepseek.com/
+- chatgpt. Accesed on ; (05/11/2025 - 18/11/2025).Retrieved from chatgpt: https://chatgpt.com/
 
 
 
