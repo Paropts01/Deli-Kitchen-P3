@@ -186,7 +186,12 @@ added new content on student life page
 - updated final part of search feature on javascript and css and html
 - deletd the multistep form on apply page and added the final apply form
 - transferred all the pages codes to the main folder
- 
+
+# changelog v12 (19/11/2025)
+- fixed css structures
+- commented 
+- updated the readme file
+
 
 
 # Responsiveness
